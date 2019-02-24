@@ -9,10 +9,9 @@ package cse360assign2;
 public class Calculator {
 /* 
  * This class contains the functions that a basic calculator contains from a given
- * input from another file. The methods in the file can be activated in another
- * file and without activation, the class essentially does nothing. However, in it's
- * current state, the class does nothing but return 0 in one method and an empty string
- * "" in another.
+ * input from another file. The methods update the current value of the central
+ * variable total, return the value of total, or return an empty string "". The
+ * methods in this class are accessed by another test file to become activated.
 */
 	
 	private int total;
@@ -28,56 +27,63 @@ public class Calculator {
 	
 	public int getTotal () {
 	/*
-	 * This method is to access the variable total in this class from any alternate 
-	 * file that requires it. However, as is, this will only return the integer value
-	 * 0.
+	 * This method returns the current value of the variable total.
 	 * 
-	 * @return		the integer 0, in this case
+	 * @return	total	the current value in variable total
 	 */
-		return 0;
+
+		return total;
 	}
 	
 	public void add (int value) {
 	/*
-	 * This method, presumably, takes in an integer and adds it to another and
-	 * updates the variable total. However, in it's current state, this method
-	 * does nothing.
+	 * This method takes in an integer and adds it to the variable total and updates
+	 * the current value of total.
 	 * 
 	 * @param	value	the integer entered to be added
 	 */
+		
+		total = total + value;
 		
 	}
 	
 	public void subtract (int value) {
 	/*
-	 * This method, presumably, takes in an integer and subtracts it from another
-	 * and updates the variable total. However, in it's current state, this method
-	 * does nothing.
+	 * This method takes in an integer and subtracts it from the variable total and
+	 * updates the current value of total.
 	 * 
 	 * @param	value	the integer entered to be subtracted
 	 */
+		
+		total = total - value;
 		
 	}
 	
 	public void multiply (int value) {
 	/*
-	 * This method, presumably, takes in an integer and multiplies it by another
-	 * and updates the variable total. However, in it's current state, this method
-	 * does nothing.
+	 * This method takes in an integer and multiplies it by the variable total and
+	 * updates the current value of total.
 	 * 
 	 * @param	value	the integer entered to be multiplied
 	 */
+		
+		total = total * value;
 		
 	}
 	
 	public void divide (int value) {
 	/*
-	 * This method, presumably, takes in an integer and is divided by another
-	 * and updates the variable total. However, in it's current state, this method
-	 * does nothing.
+	 * This method takes in an integer and is divided by the variable total and
+	 * updates the current value of total.
 	 * 
 	 * @param	value	the integer entered to be divided by
 	 */
+		if(value == 0) {
+			total = 0;
+		}
+		else {
+			total = total / value;
+		}
 		
 	}
 	
